@@ -5,6 +5,14 @@
 <meta charset="utf-8">
 </head>
 <body>
+<div id="app"> 
+<select v-model="selectValue"> 
+<option v-for="(num, idx) in numbers" v-bind:key="idx"> 
+{{ num }} 
+</option> 
+</select> 
+<p>{{ selectValue }}</p> 
+</div>
 <script type="text/javascript" src=11.js>
 </script>
 </body>
