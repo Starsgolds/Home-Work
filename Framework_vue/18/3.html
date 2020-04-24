@@ -5,6 +5,18 @@
 <meta charset="utf-8">
 </head>
 <body>
+<center>
+<div id="app" style="width: 800px;">
+<a href="#" 
+v-on:click.left.prevent="text = 'left'"
+v-on:click.right.prevent="text = 'right'"
+v-on:click.middle.prevent="text = 'middle'"
+>
+Кнопка
+</a>
+<p v-if="text != ''">{{ text}}</p>
+</div>
+</center>
 <script type="text/javascript" src=3.js>
 </script>
 </body>
