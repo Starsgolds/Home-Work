@@ -5,6 +5,12 @@
 <meta charset="utf-8">
 </head>
 <body>
+<center>
+<div id="app" style="width: 800px;">
+<button v-on:click="getHtmlCode">Открыть</button>
+<p v-if="htmlCode != ''" v-html="htmlCode"><p>
+</div>
+</center>
 <script type="text/javascript" src=4.js>
 </script>
 </body>
