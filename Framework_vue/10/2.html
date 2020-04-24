@@ -5,6 +5,13 @@
 <meta charset="utf-8">
 </head>
 <body>
+<div id="app"> 
+<textarea v-model="text" cols="30" rows="10"></textarea> 
+<button v-on:click="chunkText">Тыц</button> 
+<ul> 
+<li v-for="(word, idx) in words" v-bind:key="idx">{{ word }}</li> 
+</ul> 
+</div>
 <script type="text/javascript" src=2.js>
 </script>
 </body>
