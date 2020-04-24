@@ -5,6 +5,13 @@
 <meta charset="utf-8">
 </head>
 <body>
+<div id="app"> 
+<ul> 
+<li v-for="(item, idx) in items" v-bind:key="idx" v-on:click='squared(idx)'> 
+{{ item }} 
+</li> 
+</ul> 
+</div>
 <script type="text/javascript" src=4.js>
 </script>
 </body>
