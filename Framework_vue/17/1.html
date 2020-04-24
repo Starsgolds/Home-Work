@@ -5,6 +5,12 @@
 <meta charset="utf-8">
 </head>
 <body>
+<center>
+<div id="app" style="width: 800px;">
+<a href="http://yandex.rh/"; v-on:click.prevent="isTextShow = true">Яндекс</a>
+<p v-if="isTextShow">{{ showText() }}</p>
+</div>
+</center>
 <script type="text/javascript" src=1.js>
 </script>
 </body>
