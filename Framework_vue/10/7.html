@@ -5,6 +5,15 @@
 <meta charset="utf-8">
 </head>
 <body>
+<div id="app"> 
+<input type="checkbox" v-model="values" value="a"> 
+<input type="checkbox" v-model="values" value="b"> 
+<ul> 
+<li v-for="(value, idx) in values" v-bind:key="idx"> 
+{{ value }} 
+</li> 
+</ul>
+
 <script type="text/javascript" src=7.js>
 </script>
 </body>
