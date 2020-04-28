@@ -1,12 +1,12 @@
-let input = document.querySelector("input"); 
-let text = document.querySelector("p"); 
-let set = new Set(); 
-input.addEventListener("focus", () => input.value = ""); 
-document.querySelector("button").addEventListener("click", () => { 
-set.add(input.value); 
-let res = ""; 
-for (let elem of set) { 
-res += elem + ", "; 
-} 
-text.innerHTML = res; 
-})
+let input = document.querySelector('#input'); 
+let button = document.querySelector('#button'); 
+let text = document.querySelector('p'); 
+let set = new Set; 
+button.addEventListener('click', function(){ 
+let newNum = +input.value; 
+let str = ''; 
+input.value = ''; 
+set.add(newNum); 
+str = [...set].join(','); 
+text.innerHTML = str; 
+});
