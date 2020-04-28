@@ -1,12 +1,10 @@
-let input = document.querySelector('#input'); 
-let button = document.querySelector('#button'); 
-let text = document.querySelector('p'); 
+let p = document.querySelector('p'); 
+let inp = document.querySelector('input'); 
+let btn = document.querySelector('button'); 
 let set = new Set; 
-button.addEventListener('click', function(){ 
-let newNum = +input.value; 
-let str = ''; 
-input.value = ''; 
-set.add(newNum); 
-str = [...set].join(','); 
-text.innerHTML = str; 
+btn.addEventListener('click', function () { 
+set.add(parseInt(inp.value)); 
+for(let elem of set){ 
+p.innerHTML += elem + ','; 
+} 
 });
