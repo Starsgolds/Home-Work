@@ -39,7 +39,7 @@ y : Math.floor(Math.random()*pipeUp.height)-pipeUp.height
 }); 
 }
 if( bX + bird.width >= pipe[i].x && bX <= pipe[i].x + pipeUp.width && (bY <= pipe[i].y + pipeUp.height || bY+bird.height >= pipe[i].y+constant) || bY + bird.height >=  cvs.height - fg.height){
-location.reload(); // reload the page
+location.reload(); 
 }
 if(pipe[i].x == 5){
 score++;
