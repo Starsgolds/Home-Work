@@ -1,6 +1,5 @@
 var cvs = document.getElementById("canvas");
 var ctx = cvs.getContext("2d");
-// load images
 var bird = new Image();
 var bg = new Image();
 var fg = new Image();
@@ -11,25 +10,21 @@ bg.src = "img/bg.png";
 fg.src = "img/fg.png";
 pipeUp.src = "img/pipeUp.png";
 pipeBottom.src = "img/pipeBottom.png";
-// some variables
 var gap = 85;
 var constant;
 var bX = 10;
 var bY = 150;
 var gravity = 1.5;
 var score = 0;
-// on key down
 document.addEventListener("keydown",moveUp);
 function moveUp(){
 bY -= 25;
 }
-// pipe coordinates
 var pipe = [];
 pipe[0] = {
 x : cvs.width,
 y : 0
 };
-// draw images
 function draw(){
 ctx.drawImage(bg,0,0);
 for(var i = 0; i < pipe.length; i++){
@@ -43,7 +38,6 @@ x : cvs.width,
 y : Math.floor(Math.random()*pipeUp.height)-pipeUp.height
 }); 
 }
-// detect collision
 if( bX + bird.width >= pipe[i].x && bX <= pipe[i].x + pipeUp.width && (bY <= pipe[i].y + pipeUp.height || bY+bird.height >= pipe[i].y+constant) || bY + bird.height >=  cvs.height - fg.height){
 location.reload(); // reload the page
 }
