@@ -13,11 +13,11 @@ pipeUp.src = "img/pipeUp.png";
 pipeBottom.src = "img/pipeBottom.png";
 
 var gap = 85;
-var constant=pipeUp.height+gap;
+var constant;
 var bX=10;
 var bY=150;
 var gravity=1,5;
-
+var score=0;
 //нажатие на кнопку
 document.addEventListener("keydown", moveUp);
 
@@ -38,6 +38,7 @@ function draw() {
  ctx.drawImage(bg, 0, 0);
 
  for(var i = 0; i < pipe.length; i++) {
+constant=pipeUp.height+gap;
  ctx.drawImage(pipeUp,pipe[i].x,pipe[i].y);
  ctx.drawImage(pipeBottom,pipe[i].x,pipe[i].y+constant);
 pipe[i].x--;
